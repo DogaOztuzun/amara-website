@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="font-cormorant text-2xl font-bold mb-4">AMARA Weddings</h3>
             <p className="text-gray-300 mb-4">
-              Creating unforgettable Mediterranean weddings in the heart of Fethiye, Turkey.
+              Creating unforgettable destination weddings in Fethiye, the heart of Turkey.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-dusty-rose transition-colors">
@@ -27,9 +27,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-cormorant text-xl font-bold mb-4">Quick Links</h4>
+            <h4 className="font-cormorant text-xl font-bold mb-4">Quick links</h4>
             <ul className="space-y-2">
-              {['About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => (
+              {['About', 'Services', 'Portfolio', 'Packages', 'Testimonials', 'FAQ', 'Contact'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-cormorant text-xl font-bold mb-4">Contact Info</h4>
+            <h4 className="font-cormorant text-xl font-bold mb-4">Contact info</h4>
             <ul className="space-y-4">
               <li className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />

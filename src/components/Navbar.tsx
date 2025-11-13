@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {['About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => (
+            {['About', 'Services', 'Portfolio', 'Packages', 'Testimonials', 'FAQ', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -100,7 +100,7 @@ const Navbar = () => {
             className="md:hidden bg-white/95 backdrop-blur-md shadow-lg rounded-b-lg"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => (
+              {['About', 'Services', 'Portfolio', 'Packages', 'Testimonials', 'FAQ', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}

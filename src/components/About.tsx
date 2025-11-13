@@ -28,29 +28,24 @@ const About = () => {
           
           <div>
             <h2 className="text-4xl font-cormorant font-bold mb-6">
-              Creating Magical Moments Since 2013
+              Why choose AMARA Weddings
             </h2>
             <p className="text-lg mb-6 text-gray-600">
-              With over a decade of experience crafting unforgettable Mediterranean 
-              weddings, Amara Wedding has become synonymous with elegance and 
-              excellence in Fethiye, Turkey.
+              AMARA Weddings is a full-service destination wedding planner based in Turkey. 
+              We help couples from around the world realize their dream weddings in Fethiye, Turkey’s paradise.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">10+</h3>
-                <p className="text-gray-600">Years of Experience</p>
+                <h3 className="font-cormorant text-2xl font-bold mb-2">Full-service destination wedding planning</h3>
               </div>
               <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">500+</h3>
-                <p className="text-gray-600">Weddings Planned</p>
+                <h3 className="font-cormorant text-2xl font-bold mb-2">Best venues and vendors</h3>
               </div>
               <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">100%</h3>
-                <p className="text-gray-600">Satisfaction Rate</p>
+                <h3 className="font-cormorant text-2xl font-bold mb-2">Pricing flexibility</h3>
               </div>
               <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">50+</h3>
-                <p className="text-gray-600">Venue Partners</p>
+                <h3 className="font-cormorant text-2xl font-bold mb-2">Multilingual support</h3>
               </div>
             </div>
           </div>

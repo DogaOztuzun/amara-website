@@ -49,7 +49,7 @@ const ContactForm = () => {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           <div>
-            <h2 className="text-4xl font-cormorant font-bold mb-6">Let's Plan Your Perfect Day</h2>
+            <h2 className="text-4xl font-cormorant font-bold mb-6">Let’s plan your perfect wedding day</h2>
             <p className="text-lg text-gray-600 mb-8">
               Ready to begin your journey? Contact us to discuss your dream Mediterranean wedding.
             </p>
@@ -82,6 +82,9 @@ const ContactForm = () => {
           </div>
 
           <div className="bg-soft-cream p-8 rounded-lg shadow-lg">
+            <p className="text-gray-700 mb-6">
+              Fill out the form to book your free consultation with our wedding planning consultant and receive a brochure with detailed information about our services.
+            </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

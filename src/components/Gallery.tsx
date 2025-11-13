@@ -6,27 +6,27 @@ import { X } from 'lucide-react';
 const images = [
   {
     src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Beach',
+    category: 'Beach Wedding',
   },
   {
     src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Garden',
+    category: 'Decor',
   },
   {
     src: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Beach',
+    category: 'Beach Wedding',
   },
   {
     src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Garden',
+    category: 'Ceremony',
   },
   {
     src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Venue',
+    category: 'Hotel Wedding',
   },
   {
     src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    category: 'Venue',
+    category: 'Dinner & Reception',
   },
 ];
 
@@ -47,9 +47,9 @@ const Gallery = () => {
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">Our Portfolio</h2>
+          <h2 className="text-4xl font-cormorant font-bold mb-4">Amara Wedding Photo Gallery</h2>
           <div className="flex justify-center gap-4 mb-8">
-            {['All', 'Beach', 'Garden', 'Venue'].map((category) => (
+            {['All', 'Beach Wedding', 'Hotel Wedding', 'Decor', 'Ceremony', 'Dinner & Reception'].map((category) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}

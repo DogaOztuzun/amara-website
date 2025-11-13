@@ -1,21 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-dancing: "Dancing Script", cursive;
+
+  --color-soft-cream: #F8F1ED;
+  --color-dusty-rose: #D4B5A3;
+  --color-warm-brown: #8B7355;
+  --color-text-dark: #2C2C2C;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply font-montserrat text-text-dark bg-soft-cream;
+  font-family: var(--font-montserrat);
+  color: var(--color-text-dark);
+  background-color: var(--color-soft-cream);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-cormorant;
+  font-family: var(--font-cormorant);
 }
 
 .accent-text {
-  @apply font-dancing;
+  font-family: var(--font-dancing);
 }
 
 /* Enhanced navbar styles */

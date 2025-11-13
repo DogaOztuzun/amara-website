@@ -1,3 +1,13 @@
 # amara-website
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/DogaOztuzun/amara-website)
+To run local server
+
+```bash
+npm run dev
+```
+
+To build the web page
+
+```bash
+npm run build
+```
