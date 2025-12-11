@@ -54,7 +54,7 @@ const Packages = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-cormorant font-bold">Our wedding packages</h2>
           {/* Gold Vine Divider - right tip next to last 's' in 'packages' */}
-          <div className="flex justify-center -mt-[78px] -mb-10 ml-[18%]">
+          <div className="flex justify-center -mt-[78px] -mb-10 ml-[45%] sm:ml-[18%]">
             <img
               src="/Golden leaves separator line_Website.svg"
               alt=""
