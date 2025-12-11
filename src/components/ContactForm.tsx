@@ -81,7 +81,7 @@ const ContactForm = () => {
             </div>
 
             {/* Gold Vine Divider - right tip next to 'M' in 'PM' */}
-            <div className="flex justify-center mt-4 md:-mt-[100px] -mb-10 ml-0 md:ml-[-5%]">
+            <div className="flex justify-center -mt-14 md:-mt-[100px] -mb-10 ml-[15%] md:ml-[-5%]">
               <img
                 src="/Golden leaves separator line_Website.svg"
                 alt=""
