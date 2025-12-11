@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         'soft-cream': '#F8F1ED',
-        'dusty-rose': '#D4B5A3',
-        'warm-brown': '#8B7355',
+        'dusty-rose': '#DEA193',
+        'warm-brown': '#4A4038',
         'text-dark': '#2C2C2C',
       },
       fontFamily: {

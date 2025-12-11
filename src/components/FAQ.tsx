@@ -79,7 +79,7 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-8">
                   {faq.question}
@@ -121,7 +121,7 @@ const FAQ = () => {
           </p>
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-colors duration-300 font-medium"
+            className="inline-block px-8 py-3 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-colors duration-300 font-medium cursor-pointer"
           >
             Contact us
           </a>

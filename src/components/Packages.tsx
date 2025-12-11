@@ -52,7 +52,15 @@ const Packages = () => {
     <section id="packages" className="py-20 bg-soft-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">Our wedding packages</h2>
+          <h2 className="text-4xl font-cormorant font-bold">Our wedding packages</h2>
+          {/* Gold Vine Divider - right tip next to last 's' in 'packages' */}
+          <div className="flex justify-center -mt-[78px] -mb-10 ml-[18%]">
+            <img
+              src="/Golden leaves separator line_Website.svg"
+              alt=""
+              className="w-48 h-auto mix-blend-multiply rotate-90"
+            />
+          </div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Tailored wedding packages for your dream destination wedding in Fethiye.
           </p>
@@ -133,7 +141,7 @@ const Packages = () => {
 
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-all duration-300 text-lg font-medium shadow-md hover:shadow-xl"
+            className="inline-block px-10 py-4 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-all duration-300 text-lg font-medium shadow-md hover:shadow-xl cursor-pointer"
           >
             Design your perfect wedding package with our expert guidance
           </a>

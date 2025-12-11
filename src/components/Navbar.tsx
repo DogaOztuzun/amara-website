@@ -60,13 +60,15 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             {[
-              { Icon: Instagram, label: 'Instagram' },
-              { Icon: Facebook, label: 'Facebook' },
-              { Icon: PinIcon, label: 'Pinterest' },
-            ].map(({ Icon, label }) => (
+              { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/amara_weddings_fethiye/' },
+              { Icon: Facebook, label: 'Facebook', href: '#' },
+              { Icon: PinIcon, label: 'Pinterest', href: '#' },
+            ].map(({ Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                target={href !== '#' ? '_blank' : undefined}
+                rel={href !== '#' ? 'noopener noreferrer' : undefined}
                 className={`${
                   isScrolled
                     ? 'text-gray-800 hover:text-dusty-rose'
@@ -81,7 +83,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 ${
+            className={`md:hidden p-2 cursor-pointer ${
               isScrolled ? 'text-gray-800' : 'text-white'
             }`}
             aria-expanded={isMobileMenuOpen}
@@ -111,7 +113,9 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex space-x-4 px-3 py-2">
-                <Instagram className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
+                <a href="https://www.instagram.com/amara_weddings_fethiye/" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
+                </a>
                 <Facebook className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
                 <PinIcon className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
               </div>

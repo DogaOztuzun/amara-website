@@ -14,7 +14,7 @@ const Footer = () => {
               Creating unforgettable destination weddings in Fethiye, the heart of Turkey.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-dusty-rose transition-colors">
+              <a href="https://www.instagram.com/amara_weddings_fethiye/" target="_blank" rel="noopener noreferrer" className="hover:text-dusty-rose transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-dusty-rose transition-colors">
@@ -73,7 +73,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-dusty-rose text-white py-2 rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300"
+                className="w-full bg-dusty-rose text-white py-2 rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300 cursor-pointer"
               >
                 Subscribe
               </button>
