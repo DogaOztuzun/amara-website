@@ -42,7 +42,7 @@ const services = [
   {
     icon: Car,
     title: 'Transfer services',
-    description: 'We offer private transfers for you and your guests, including airport pickups and shuttle service to venues and hotels.',
+    description: 'We coordinate private transfers for you and your guests, including airport pickups and shuttle service to venues and hotels.',
   },
   {
     icon: Plane,
@@ -76,7 +76,15 @@ const Services = () => {
     <section id="services" className="py-20 bg-soft-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">Our wedding planning services</h2>
+          <h2 className="text-4xl font-cormorant font-bold">Our wedding planning services</h2>
+          {/* Gold Vine Divider - right tip next to last 's' in 'services' */}
+          <div className="flex justify-center -mt-[78px] -mb-10 ml-[26%]">
+            <img
+              src="/Golden leaves separator line_Website.svg"
+              alt=""
+              className="w-48 h-auto mix-blend-multiply rotate-90"
+            />
+          </div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             From finding the perfect venue to coordinating vendors and everything in between,
             we'll plan out every detail to make your wedding nothing short of magical.
@@ -110,7 +118,7 @@ const Services = () => {
           </p>
           <a
             href="#contact"
-            className="inline-block bg-dusty-rose text-white px-8 py-3 rounded-lg font-medium hover:bg-warm-brown transition-colors duration-300"
+            className="inline-block bg-dusty-rose text-white px-8 py-3 rounded-lg font-medium hover:bg-warm-brown transition-colors duration-300 cursor-pointer"
           >
             Learn more about our services
           </a>

@@ -20,9 +20,10 @@ const About = () => {
         >
           <div className="relative h-[500px]">
             <img
-              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              src="/about/about-image.jpg"
               alt="Mediterranean wedding setup"
               className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-xl"
+              style={{ filter: 'sepia(15%) saturate(90%) brightness(108%) contrast(90%) hue-rotate(-5deg)' }}
             />
           </div>
           

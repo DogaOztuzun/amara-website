@@ -79,6 +79,15 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
+
+            {/* Gold Vine Divider - right tip next to 'M' in 'PM' */}
+            <div className="flex justify-center mt-4 md:-mt-[100px] -mb-10 ml-0 md:ml-[-5%]">
+              <img
+                src="/Golden leaves separator line_Website.svg"
+                alt=""
+                className="w-48 md:w-64 h-auto mix-blend-multiply rotate-90"
+              />
+            </div>
           </div>
 
           <div className="bg-soft-cream p-8 rounded-lg shadow-lg">
@@ -191,7 +200,7 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-warm-brown transition-colors duration-300"
+                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-warm-brown transition-colors duration-300 cursor-pointer"
               >
                 Send Message
               </button>

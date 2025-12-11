@@ -100,7 +100,7 @@ const Testimonials = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-dusty-rose text-gray-700 hover:text-white rounded-full p-3 shadow-lg transition-all duration-300"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-dusty-rose text-gray-700 hover:text-white rounded-full p-3 shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -108,7 +108,7 @@ const Testimonials = () => {
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-dusty-rose text-gray-700 hover:text-white rounded-full p-3 shadow-lg transition-all duration-300"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-dusty-rose text-gray-700 hover:text-white rounded-full p-3 shadow-lg transition-all duration-300 cursor-pointer"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6" />
@@ -121,7 +121,7 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
                   index === currentIndex
                     ? 'bg-dusty-rose w-8'
                     : 'bg-gray-300 hover:bg-gray-400'
