@@ -49,8 +49,8 @@ const ContactForm = () => {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           <div>
-            <h2 className="text-4xl font-cormorant font-bold mb-6">Let’s plan your perfect wedding day</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <h2 className="text-2xl md:text-4xl font-cormorant font-bold mb-6">Let's plan your perfect wedding day</h2>
+            <p className="text-sm md:text-lg text-gray-600 mb-8">
               Ready to begin your journey? Contact us to discuss your dream Mediterranean wedding.
             </p>
             
@@ -58,7 +58,7 @@ const ContactForm = () => {
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-dusty-rose" />
                 <div>
-                  <h3 className="font-semibold">Email Us</h3>
+                  <h3 className="font-semibold">Email us</h3>
                   <p className="text-gray-600">xxx@amara.wedding</p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 text-dusty-rose" />
                 <div>
-                  <h3 className="font-semibold">Call Us</h3>
+                  <h3 className="font-semibold">Call us</h3>
                   <p className="text-gray-600">+90 (252) XXX XX XX</p>
                 </div>
               </div>
@@ -74,14 +74,14 @@ const ContactForm = () => {
               <div className="flex items-center space-x-4">
                 <Calendar className="w-6 h-6 text-dusty-rose" />
                 <div>
-                  <h3 className="font-semibold">Office Hours</h3>
+                  <h3 className="font-semibold">Office hours</h3>
                   <p className="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
 
             {/* Gold Vine Divider - right tip next to 'M' in 'PM' */}
-            <div className="flex justify-center -mt-14 md:-mt-[100px] -mb-10 ml-[15%] md:ml-[-5%]">
+            <div className="flex justify-center -mt-20 md:-mt-[100px] -mb-16 md:-mb-10 ml-[15%] md:ml-[-5%]">
               <img
                 src="/Golden leaves separator line_Website.svg"
                 alt=""
@@ -91,8 +91,8 @@ const ContactForm = () => {
           </div>
 
           <div className="bg-soft-cream p-8 rounded-lg shadow-lg">
-            <p className="text-gray-700 mb-6">
-              Fill out the form to book your free consultation with our wedding planning consultant and receive a brochure with detailed information about our services.
+            <p className="text-sm md:text-base text-gray-700 mb-6">
+              Fill out the form, and we'll send you a brochure with detailed information about our services. If you're ready to book a free consultation with our wedding planning consultant, leave us a message.
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,7 +200,7 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-warm-brown transition-colors duration-300 cursor-pointer"
+                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300 cursor-pointer"
               >
                 Send Message
               </button>

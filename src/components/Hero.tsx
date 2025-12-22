@@ -7,11 +7,12 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1513521523607-ba30a1159755?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+          backgroundImage: 'url("/hero-image.png")',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
-        <div className="absolute inset-0 bg-dusty-rose/15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-black/45" />
+        <div className="absolute inset-0 bg-dusty-rose/10" />
+        <div className="absolute inset-0 bg-white/10" />
       </div>
       
       <div className="relative h-full flex items-center justify-center text-center text-white px-4">
@@ -20,12 +21,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="font-cormorant text-5xl md:text-7xl mb-8">
+          <h1 className="font-cormorant text-5xl md:text-7xl mb-8 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
             Bespoke destination weddings in Turkey
           </h1>
-      
 
-          <p className="font-montserrat text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+          <p className="font-montserrat text-lg md:text-xl mb-12 max-w-2xl mx-auto drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
             Your exclusive destination wedding planner in Fethiye
           </p>
           <motion.button

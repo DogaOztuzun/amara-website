@@ -99,8 +99,8 @@ const Gallery = () => {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">Amara Wedding Photo Gallery</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-cormorant font-bold mb-4">Amara Wedding Photo Gallery</h2>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 px-2">
             {['All', 'Beach Wedding', 'Hotel Wedding', 'Decor', 'Ceremony', 'Dinner & Reception'].map((category) => (
               <button
@@ -128,7 +128,7 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={`Wedding ${image.category}`}
-                className="w-full h-80 object-cover rounded-lg"
+                className="w-full aspect-square object-cover rounded-lg"
                 style={{ filter: 'sepia(15%) saturate(110%) brightness(105%) contrast(95%)' }}
               />
             </div>
