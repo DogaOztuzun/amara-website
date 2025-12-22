@@ -8,6 +8,7 @@ export default {
         'dusty-rose': '#DEA193',
         'warm-brown': '#4A4038',
         'text-dark': '#2C2C2C',
+        'footer-grey': '#555555',
       },
       fontFamily: {
         cormorant: ['Cormorant Garamond', 'serif'],

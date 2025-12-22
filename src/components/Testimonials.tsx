@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: 'Tatiana & Slava',
     location: 'Germany',
-    text: 'We cannot thank Amara Weddings enough for organizing our perfect wedding ceremony and reception! From the moment we reached out, the team was attentive and genuinely passionate about bringing our ideas to life. We had our ceremony in a spot with breathtaking sea views. The decor, food, and live music at the reception were flawless, just as we imagined. Our guests looked satisfied. We couldn\'t have asked for a more beautiful day. Thank you, Amara team, for making our dream wedding come true!',
+    text: 'We chose "Secret Garden" as a concept for our wedding. The Amara Weddings team transformed our venue into a floral paradise, with cascades of peonies, garden roses, wisteria, and other beautiful flowers. It made us feel like walking in an enchanted garden. Amara made our romantic vision bloom into reality!',
     date: 'September 2024',
     image: '/images/testimonials/couple2.jpg',
   },
@@ -47,9 +47,9 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">Customer testimonials</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-cormorant font-bold mb-4">Customer testimonials</h2>
+          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
             Hear from couples who celebrated their special day with us in Fethiye.
           </p>
         </div>
@@ -84,13 +84,13 @@ const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 leading-relaxed text-lg italic mb-8 max-w-3xl">
+                <p className="text-gray-700 leading-relaxed text-sm md:text-lg italic mb-8 max-w-3xl">
                   {currentTestimonial.text}
                 </p>
 
                 {/* Name */}
                 <div className="border-t-2 border-dusty-rose pt-6">
-                  <p className="text-2xl font-cormorant font-bold text-gray-900">
+                  <p className="text-xl md:text-2xl font-cormorant font-bold text-gray-900">
                     {currentTestimonial.name}
                   </p>
                 </div>

@@ -51,17 +51,17 @@ const Packages = () => {
   return (
     <section id="packages" className="py-20 bg-soft-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold">Our wedding packages</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-cormorant font-bold">Our wedding packages</h2>
           {/* Gold Vine Divider - right tip next to last 's' in 'packages' */}
-          <div className="flex justify-center -mt-[78px] -mb-10 ml-[45%] sm:ml-[18%]">
+          <div className="flex justify-center -mt-[85px] -mb-10 ml-[45%] sm:ml-[18%]">
             <img
               src="/Golden leaves separator line_Website.svg"
               alt=""
               className="w-48 h-auto mix-blend-multiply rotate-90"
             />
           </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
             Tailored wedding packages for your dream destination wedding in Fethiye.
           </p>
         </div>
@@ -79,7 +79,7 @@ const Packages = () => {
               >
                 {/* Header Section */}
                 <div className="p-8 bg-dusty-rose text-white text-center h-32 flex flex-col justify-center">
-                  <h3 className="text-3xl font-cormorant font-bold mb-2">{pkg.name}</h3>
+                  <h3 className="text-xl md:text-3xl font-cormorant font-bold mb-2">{pkg.name}</h3>
                   {pkg.subtitle && (
                     <p className="text-base italic text-white/90">
                       {pkg.subtitle}
@@ -94,7 +94,7 @@ const Packages = () => {
                       {pkg.features.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <Check className="w-5 h-5 text-dusty-rose mr-3 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700 leading-relaxed">{feature}</span>
+                          <span className="text-sm md:text-base text-gray-700 leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -111,13 +111,13 @@ const Packages = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center mb-12 max-w-3xl mx-auto"
           >
-            <h3 className="text-3xl font-cormorant font-bold mb-2">
+            <h3 className="text-xl md:text-3xl font-cormorant font-bold mb-2">
               Custom wedding ceremony
             </h3>
             <p className="text-base italic text-gray-600 mb-4">
               (fully customizable)
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-700 leading-relaxed">
               Have something special in mind? We specialize in bespoke weddings — pretty much anything you might think of, we can realize it!
             </p>
           </motion.div>
@@ -129,19 +129,19 @@ const Packages = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center space-y-6 bg-white rounded-2xl shadow-lg p-12"
         >
-          <p className="text-3xl font-cormorant font-bold text-gray-900">
+          <p className="text-xl md:text-3xl font-cormorant font-bold text-gray-900">
             Prices for our packages start from €3,000
           </p>
 
           <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-sm md:text-lg text-gray-700 mb-6">
               Our wedding packages include essential services. Fill out the form below to get a detailed list of our extra services or reach out to us to discuss custom options.
             </p>
           </div>
 
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-all duration-300 text-lg font-medium shadow-md hover:shadow-xl cursor-pointer"
+            className="inline-block px-10 py-4 bg-dusty-rose text-white rounded-full hover:bg-soft-cream hover:text-warm-brown transition-all duration-300 text-base md:text-lg font-medium shadow-md hover:shadow-xl cursor-pointer"
           >
             Design your perfect wedding package with our expert guidance
           </a>

@@ -52,12 +52,12 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 bg-soft-cream">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-cormorant font-bold mb-4">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-cormorant font-bold mb-4">
             Destination wedding in Turkey:<br />
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
             Find answers to common questions about planning a destination wedding in Turkey.
           </p>
         </div>
@@ -81,7 +81,7 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-8">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 pr-8">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
@@ -104,7 +104,7 @@ const FAQ = () => {
                   >
                     <div className="px-8 pb-6">
                       <p
-                        className="text-gray-700 leading-relaxed"
+                        className="text-sm md:text-base text-gray-700 leading-relaxed"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       />
                     </div>
@@ -116,12 +116,12 @@ const FAQ = () => {
         </motion.div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">
+          <p className="text-sm md:text-base text-gray-600 mb-6">
             Have questions about our wedding planning services? We're here to help!
           </p>
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-dusty-rose text-white rounded-full hover:bg-warm-brown transition-colors duration-300 font-medium cursor-pointer"
+            className="inline-block px-8 py-3 bg-dusty-rose text-white rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300 font-medium cursor-pointer"
           >
             Contact us
           </a>

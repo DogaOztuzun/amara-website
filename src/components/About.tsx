@@ -18,7 +18,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
         >
-          <div className="relative h-[500px]">
+          <div className="relative h-[300px] md:h-[500px]">
             <img
               src="/about/about-image.jpg"
               alt="Mediterranean wedding setup"
@@ -28,25 +28,25 @@ const About = () => {
           </div>
           
           <div>
-            <h2 className="text-4xl font-cormorant font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-cormorant font-bold mb-6 text-center">
               Why choose AMARA Weddings
             </h2>
-            <p className="text-lg mb-6 text-gray-600">
+            <p className="text-sm md:text-lg mb-6 text-gray-600">
               AMARA Weddings is a full-service destination wedding planner based in Turkey. 
               We help couples from around the world realize their dream weddings in Fethiye, Turkey’s paradise.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">Full-service destination wedding planning</h3>
+              <div className="bg-soft-cream p-6 rounded-lg flex items-center justify-center min-h-[120px]">
+                <h3 className="font-cormorant text-lg md:text-2xl font-bold text-center">Full-service destination wedding planning</h3>
               </div>
-              <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">Best venues and vendors</h3>
+              <div className="bg-soft-cream p-6 rounded-lg flex items-center justify-center min-h-[120px]">
+                <h3 className="font-cormorant text-lg md:text-2xl font-bold text-center">Best venues and vendors</h3>
               </div>
-              <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">Pricing flexibility</h3>
+              <div className="bg-soft-cream p-6 rounded-lg flex items-center justify-center min-h-[120px]">
+                <h3 className="font-cormorant text-lg md:text-2xl font-bold text-center">Pricing flexibility</h3>
               </div>
-              <div>
-                <h3 className="font-cormorant text-2xl font-bold mb-2">Multilingual support</h3>
+              <div className="bg-soft-cream p-6 rounded-lg flex items-center justify-center min-h-[120px]">
+                <h3 className="font-cormorant text-lg md:text-2xl font-bold text-center">Multilingual support</h3>
               </div>
             </div>
           </div>

@@ -75,17 +75,17 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-soft-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-cormorant font-bold">Our wedding planning services</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-cormorant font-bold">Our wedding planning services</h2>
           {/* Gold Vine Divider - right tip next to last 's' in 'services' */}
-          <div className="flex justify-center -mt-[78px] -mb-10 ml-[26%]">
+          <div className="flex justify-center -mt-[85px] -mb-10 ml-[50%] md:ml-[32%]">
             <img
               src="/Golden leaves separator line_Website.svg"
               alt=""
               className="w-48 h-auto mix-blend-multiply rotate-90"
             />
           </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
             From finding the perfect venue to coordinating vendors and everything in between,
             we'll plan out every detail to make your wedding nothing short of magical.
           </p>
@@ -93,7 +93,7 @@ const Services = () => {
 
         <motion.div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
         >
           {services.map((service, index) => (
             <motion.div
@@ -104,21 +104,21 @@ const Services = () => {
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="text-dusty-rose mb-4">
-                <service.icon className="w-12 h-12" />
+                <service.icon className="w-6 h-6 md:w-12 md:h-12" />
               </div>
-              <h3 className="text-2xl font-cormorant font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <h3 className="text-lg md:text-2xl font-cormorant font-bold mb-3">{service.title}</h3>
+              <p className="text-xs md:text-base text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
 
         <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-sm md:text-lg text-gray-600 mb-6">
             Fill out the form below to learn more about our services.
           </p>
           <a
             href="#contact"
-            className="inline-block bg-dusty-rose text-white px-8 py-3 rounded-lg font-medium hover:bg-warm-brown transition-colors duration-300 cursor-pointer"
+            className="inline-block bg-dusty-rose text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-warm-brown transition-colors duration-300 cursor-pointer"
           >
             Learn more about our services
           </a>
