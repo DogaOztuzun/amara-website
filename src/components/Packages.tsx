@@ -7,6 +7,7 @@ const packages = [
   {
     name: 'Elopement package',
     subtitle: '(up to 8 people)',
+    price: 'From €3,000',
     features: [
       'Assistance with selecting your elopement wedding venue',
       'A personal wedding planner',
@@ -20,6 +21,7 @@ const packages = [
   {
     name: 'Classic destination wedding package',
     subtitle: '',
+    price: 'From €5,500',
     features: [
       'Venue selection assistance',
       'A personal wedding planner',
@@ -75,7 +77,7 @@ const Packages = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col"
               >
                 {/* Header Section */}
                 <div className="p-8 bg-dusty-rose text-white text-center h-32 flex flex-col justify-center">
@@ -88,7 +90,7 @@ const Packages = () => {
                 </div>
 
                 {/* Features Section */}
-                <div className="p-8">
+                <div className="p-8 pb-4">
                   {pkg.features && (
                     <ul className="space-y-4">
                       {pkg.features.map((feature) => (
@@ -100,9 +102,28 @@ const Packages = () => {
                     </ul>
                   )}
                 </div>
+
+                {/* Price Section */}
+                <div className="mt-auto bg-dusty-rose/10 py-6 text-center">
+                  <p className="text-2xl md:text-3xl font-cormorant font-bold text-dusty-rose">
+                    {pkg.price}*
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Venue Note */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="text-center mb-8 max-w-3xl mx-auto"
+          >
+            <p className="text-sm md:text-base text-gray-600 italic">
+              *Our wedding packages include essential services. Venue-related charges and upgrades are quoted separately based on your preferences.
+            </p>
+          </motion.div>
 
           {/* Custom Package Text */}
           <motion.div
@@ -129,13 +150,9 @@ const Packages = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center space-y-6 bg-white rounded-2xl shadow-lg p-12"
         >
-          <p className="text-xl md:text-3xl font-cormorant font-bold text-gray-900">
-            Prices for our packages start from €3,000
-          </p>
-
           <div className="max-w-3xl mx-auto">
             <p className="text-sm md:text-lg text-gray-700 mb-6">
-              Our wedding packages include essential services. Fill out the form below to get a detailed list of our extra services or reach out to us to discuss custom options.
+              Fill out the form below to get a detailed list of our extra services or discuss custom options.
             </p>
           </div>
 
