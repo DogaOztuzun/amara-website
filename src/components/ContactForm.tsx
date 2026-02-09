@@ -27,10 +27,42 @@ const ContactForm = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xwvnelal', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          guests: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch {
+      setError('Something went wrong. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -59,7 +91,7 @@ const ContactForm = () => {
                 <Mail className="w-6 h-6 text-dusty-rose" />
                 <div>
                   <h3 className="font-semibold">Email us</h3>
-                  <p className="text-gray-600">xxx@amara.wedding</p>
+                  <p className="text-gray-600">contact@amara.wedding</p>
                 </div>
               </div>
               
@@ -67,7 +99,7 @@ const ContactForm = () => {
                 <Phone className="w-6 h-6 text-dusty-rose" />
                 <div>
                   <h3 className="font-semibold">Call us</h3>
-                  <p className="text-gray-600">+90 (252) XXX XX XX</p>
+                  <p className="text-gray-600">+90 501 549 48 08</p>
                 </div>
               </div>
               
@@ -198,13 +230,26 @@ const ContactForm = () => {
                 </label>
               </div>
 
+              {error && (
+                <p className="text-red-600 text-sm">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full bg-dusty-rose text-white py-3 rounded-full hover:bg-white hover:text-warm-brown transition-colors duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
+
+            {isSubmitted && (
+              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 text-center">
+                  Thank you for your message! We'll get back to you soon.
+                </p>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>

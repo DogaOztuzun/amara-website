@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import '@fontsource/cormorant-garamond';
 import '@fontsource/montserrat';
 import '@fontsource/dancing-script';
+import '@fontsource/bodoni-moda';
 
 function App() {
   return (
