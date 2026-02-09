@@ -61,8 +61,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             {[
               { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/amara_weddings_fethiye/' },
-              { Icon: Facebook, label: 'Facebook', href: '#' },
-              { Icon: PinIcon, label: 'Pinterest', href: '#' },
+              { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61587723539905' },
+              { Icon: PinIcon, label: 'Pinterest', href: 'https://tr.pinterest.com/Amara_Weddings_Fethiye/' },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
@@ -116,8 +116,12 @@ const Navbar = () => {
                 <a href="https://www.instagram.com/amara_weddings_fethiye/" target="_blank" rel="noopener noreferrer">
                   <Instagram className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
                 </a>
-                <Facebook className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
-                <PinIcon className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
+                <a href="https://www.facebook.com/profile.php?id=61587723539905" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
+                </a>
+                <a href="https://tr.pinterest.com/Amara_Weddings_Fethiye/" target="_blank" rel="noopener noreferrer">
+                  <PinIcon className="w-5 h-5 text-gray-800 hover:text-dusty-rose cursor-pointer transition-colors" />
+                </a>
               </div>
             </div>
           </motion.div>
