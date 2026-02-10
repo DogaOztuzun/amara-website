@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Instagram, Facebook, PinIcon, Mail, Phone, MapPin } from 'lucide-react';
 
-const MAILCHIMP_URL = 'https://wedding.us1.list-manage.com/subscribe/post-json?u=e7ff2c4245755e878ddeb0cf2&id=5fe883b655&f_id=006a9fe0f0';
+const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,6 +12,13 @@ const Footer = () => {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+
+    // Check if Mailchimp URL is configured
+    if (!MAILCHIMP_URL) {
+      setStatus('error');
+      setMessage('Newsletter subscription is not configured. Please contact the administrator.');
+      return;
+    }
 
     setStatus('submitting');
     const callbackName = 'mc_callback_' + Date.now();
