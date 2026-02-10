@@ -34,8 +34,13 @@ const Footer = () => {
         setEmail('');
       } else {
         setStatus('error');
-        const cleanMsg = data.msg?.includes('already subscribed')
+        const msg = data.msg || '';
+        const cleanMsg = msg.includes('already subscribed')
           ? 'You are already subscribed!'
+          : msg.includes('fake or invalid')
+          ? 'Please enter a valid email address.'
+          : msg.includes('too many')
+          ? 'Too many attempts. Please try again later.'
           : 'Something went wrong. Please try again.';
         setMessage(cleanMsg);
       }
