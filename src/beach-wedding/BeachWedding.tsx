@@ -647,11 +647,7 @@ export default function AyaWowWeddingTemplate() {
                 variants={fadeUp}
                 className="max-w-2xl text-lg leading-8 text-stone-200 md:text-xl"
               >
-<<<<<<< HEAD
-                An overview of seaside wedding venues curated for your celebration in Fethiye, Turkey.
-=======
                 An overview of seaside wedding venues curated for your celebration in Fethiye, Turkey. Private islands, boutique cliffside hotels, and secluded bays for an unforgettable destination wedding.
->>>>>>> c65a6b1 (Beach wedding page UI improvements)
               </motion.p>
             </div>
 
