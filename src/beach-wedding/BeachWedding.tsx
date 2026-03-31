@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useMemo, useRef, useState, type ReactNode } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
@@ -8,8 +8,6 @@ import {
   ExternalLink,
   Heart,
   MapPin,
-  Phone,
-  Sparkles,
   Waves,
   X,
   BedDouble,
@@ -466,12 +464,50 @@ const weekendFlow = [
 export default function AyaWowWeddingTemplate() {
     const [featuredId, setFeaturedId] = useState(venues[0].id);
   const [selectedId, setSelectedId] = useState(venues[0].id);
-  const [autoSyncHero, setAutoSyncHero] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const heroRef = useRef(null);
   const shortlistRef = useRef(null);
   const detailRef = useRef(null);
+  const heroSliderRef = useRef<HTMLDivElement>(null);
+  const shortlistSliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = heroSliderRef.current;
+    if (el) el.scrollLeft = el.scrollWidth / 3;
+    const el2 = shortlistSliderRef.current;
+    if (el2) el2.scrollLeft = el2.scrollWidth / 3;
+  }, []);
+
+  const handleSliderScroll = useCallback(() => {
+    const el = heroSliderRef.current;
+    if (!el) return;
+    const segmentWidth = el.scrollWidth / 3;
+    if (el.scrollLeft >= segmentWidth * 2) {
+      el.scrollLeft -= segmentWidth;
+    } else if (el.scrollLeft <= 0) {
+      el.scrollLeft += segmentWidth;
+    }
+  }, []);
+
+  const handleShortlistScroll = useCallback(() => {
+    const el = shortlistSliderRef.current;
+    if (!el) return;
+    const segmentWidth = el.scrollWidth / 3;
+    if (el.scrollLeft >= segmentWidth * 2) {
+      el.scrollLeft -= segmentWidth;
+    } else if (el.scrollLeft <= 0) {
+      el.scrollLeft += segmentWidth;
+    }
+  }, []);
+
+  const scrollShortlistNext = () => {
+    shortlistSliderRef.current?.scrollBy({ left: 244, behavior: "smooth" });
+  };
+
+  const scrollShortlistPrev = () => {
+    shortlistSliderRef.current?.scrollBy({ left: -244, behavior: "smooth" });
+  };
 
   const featuredVenue = useMemo(
     () => venues.find((venue) => venue.id === featuredId) ?? venues[0],
@@ -487,10 +523,6 @@ export default function AyaWowWeddingTemplate() {
   const selectedImages = selectedVenue.images.length ? selectedVenue.images : [""];
   const activeImage = selectedImages[activeImageIndex] ?? selectedImages[0];
 
-  const scrollToHero = () => {
-    heroRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   const scrollToShortlist = () => {
     shortlistRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -502,30 +534,11 @@ export default function AyaWowWeddingTemplate() {
   const handleSelectVenue = (venueId, shouldScroll = true) => {
     setSelectedId(venueId);
     setActiveImageIndex(0);
-    if (autoSyncHero) {
-      setFeaturedId(venueId);
-    }
+    setFeaturedId(venueId);
     if (shouldScroll) {
       window.setTimeout(() => {
         scrollToDetails();
       }, 60);
-    }
-  };
-
-  const previewSelectedInHero = (shouldScroll = true) => {
-    setFeaturedId(selectedVenue.id);
-    if (shouldScroll) {
-      window.setTimeout(() => {
-        scrollToHero();
-      }, 60);
-    }
-  };
-
-  const toggleAutoSyncHero = () => {
-    const next = !autoSyncHero;
-    setAutoSyncHero(next);
-    if (next) {
-      setFeaturedId(selectedVenue.id);
     }
   };
 
@@ -543,6 +556,14 @@ export default function AyaWowWeddingTemplate() {
   const heroPrevVenue = () => {
     const prevIndex = (selectedVenueIndex - 1 + venues.length) % venues.length;
     syncVenueEverywhere(venues[prevIndex].id);
+  };
+
+  const scrollSliderNext = () => {
+    heroSliderRef.current?.scrollBy({ left: 296, behavior: "smooth" });
+  };
+
+  const scrollSliderPrev = () => {
+    heroSliderRef.current?.scrollBy({ left: -296, behavior: "smooth" });
   };
 
   const selectNextVenue = () => {
@@ -604,17 +625,6 @@ export default function AyaWowWeddingTemplate() {
 
         <div className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
           <div className="space-y-8">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={0}
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-sm tracking-wide text-stone-100 backdrop-blur"
-            >
-              <Sparkles className="h-4 w-4" />
-              Curated for Aya — romantic, elegant, private, unforgettable
-            </motion.div>
-
             <div className="space-y-6">
               <motion.h1
                 initial="hidden"
@@ -624,7 +634,7 @@ export default function AyaWowWeddingTemplate() {
                 className="max-w-4xl text-5xl font-light leading-[1.02] tracking-[-0.04em] text-white md:text-7xl"
               >
                 A coastal wedding,
-                <span className="block text-stone-300">but shaped like a private world.</span>
+                <span className="block text-stone-300">designed around your vision.</span>
               </motion.h1>
 
               <motion.p
@@ -634,7 +644,7 @@ export default function AyaWowWeddingTemplate() {
                 variants={fadeUp}
                 className="max-w-2xl text-lg leading-8 text-stone-200 md:text-xl"
               >
-                This presentation focuses on venues and experience styles that feel exclusive, cinematic, emotionally rich, and refined — with privacy, structure, and beautiful guest flow at the center.
+                An overview of seaside wedding venues curated for your celebration in Fethiye, Turkey.
               </motion.p>
             </div>
 
@@ -646,7 +656,7 @@ export default function AyaWowWeddingTemplate() {
               {featuredVenue.links[0] && (
                 <a href={featuredVenue.links[0].url} target="_blank" rel="noreferrer">
                   <Button variant="outline" className="rounded-full border-white/20 bg-black/20 px-6 text-white hover:bg-white/10">
-                    Open lead venue
+                    View venue website
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </a>
@@ -660,8 +670,8 @@ export default function AyaWowWeddingTemplate() {
               variants={fadeUp}
               className="flex flex-wrap items-center gap-6 border-t border-white/10 pt-6 text-sm text-stone-200"
             >
-              <div className="flex items-center gap-2"><Heart className="h-4 w-4" /> 30–40 guest focus</div>
-              <div className="flex items-center gap-2"><Waves className="h-4 w-4" /> Structured seaside beauty</div>
+              <div className="flex items-center gap-2"><Heart className="h-4 w-4" /> 30–40 guests</div>
+              <div className="flex items-center gap-2"><Waves className="h-4 w-4" /> Private seaside setting</div>
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Fethiye / Göcek / Faralya</div>
             </motion.div>
           </div>
@@ -687,9 +697,7 @@ export default function AyaWowWeddingTemplate() {
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </Button>
-                  <div className="rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white backdrop-blur">
-                    Hero slider
-                  </div>
+                  <div />
                   <Button
                     variant="outline"
                     size="icon"
@@ -700,18 +708,6 @@ export default function AyaWowWeddingTemplate() {
                   </Button>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 space-y-4 p-6">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={featuredVenue.id + "-live-badge"}
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -12 }}
-                      transition={{ duration: 0.45 }}
-                      className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white backdrop-blur"
-                    >
-                      Now previewing · {featuredVenue.name}
-                    </motion.div>
-                  </AnimatePresence>
                   <div className="inline-flex rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs uppercase tracking-[0.24em] text-stone-100 backdrop-blur">
                     {featuredVenue.score}
                   </div>
@@ -731,15 +727,12 @@ export default function AyaWowWeddingTemplate() {
 
         <div className="relative mx-auto mt-2 max-w-7xl px-6 pb-12 lg:px-12">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <div>
-              <div className="text-xs uppercase tracking-[0.24em] text-stone-400">Browse at the top</div>
-              <div className="mt-1 text-sm text-stone-300">Slide venues here without leaving the hero section.</div>
-            </div>
+            <div />
             <div className="hidden items-center gap-2 md:flex">
               <Button
                 variant="outline"
                 size="icon"
-                onClick={heroPrevVenue}
+                onClick={scrollSliderPrev}
                 className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -747,7 +740,7 @@ export default function AyaWowWeddingTemplate() {
               <Button
                 variant="outline"
                 size="icon"
-                onClick={heroNextVenue}
+                onClick={scrollSliderNext}
                 className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10"
               >
                 <ChevronRight className="h-4 w-4" />
@@ -755,15 +748,15 @@ export default function AyaWowWeddingTemplate() {
             </div>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {venues.map((venue) => {
+          <div ref={heroSliderRef} onScroll={handleSliderScroll} className="flex gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {[...venues, ...venues, ...venues].map((venue, index) => {
               const isHeroActive = venue.id === featuredVenue.id;
               return (
                 <button
-                  key={venue.id + "-hero-slide"}
+                  key={venue.id + "-hero-slide-" + index}
                   type="button"
                   onClick={() => syncVenueEverywhere(venue.id)}
-                  className={`group min-w-[240px] overflow-hidden rounded-[1.4rem] border text-left transition-all duration-300 md:min-w-[280px] ${isHeroActive ? "border-white/30 bg-white/[0.08] shadow-2xl shadow-black/20" : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06]"}`}
+                  className={`group min-w-[240px] cursor-pointer overflow-hidden rounded-[1.4rem] border text-left transition-all duration-300 md:min-w-[280px] ${isHeroActive ? "border-white/30 bg-white/[0.08] shadow-2xl shadow-black/20" : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06]"}`}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden border-b border-white/10">
                     <img src={venue.images[0]} alt={venue.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" />
@@ -777,9 +770,6 @@ export default function AyaWowWeddingTemplate() {
                     </div>
                   </div>
                   <div className="space-y-2 p-4">
-                    <div className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                      {isHeroActive ? "Now showing in hero" : "Click to show in hero"}
-                    </div>
                     <p className="line-clamp-3 text-sm leading-6 text-stone-300">{venue.summary}</p>
                   </div>
                 </button>
@@ -788,17 +778,6 @@ export default function AyaWowWeddingTemplate() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.7 }}
-          className="absolute bottom-5 left-1/2 -translate-x-1/2 text-stone-300"
-        >
-          <div className="flex flex-col items-center gap-2 text-xs uppercase tracking-[0.28em]">
-            Scroll
-            <ChevronDown className="h-4 w-4 animate-bounce" />
-          </div>
-        </motion.div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-12">
@@ -880,48 +859,30 @@ export default function AyaWowWeddingTemplate() {
 
       <section ref={detailRef} className="mx-auto max-w-7xl scroll-mt-24 px-6 py-20 lg:px-12">
         <div className="sticky top-4 z-20 mb-8 overflow-hidden rounded-[1.5rem] border border-white/10 bg-stone-900/80 backdrop-blur-xl">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-4 py-3">
-            <div>
-              <div className="text-xs uppercase tracking-[0.24em] text-stone-400">Selected venue</div>
-              <div className="mt-1 text-lg font-light text-white">{selectedVenue.name}</div>
-              <div className="mt-1 text-xs text-stone-500">Hero preview: {featuredVenue.name}</div>
-              <div className="mt-1 text-xs text-stone-500">Mode: {autoSyncHero ? "auto-sync" : "manual preview"}</div>
+          <div className="flex items-center gap-2 px-4 py-4">
+            <Button variant="outline" size="icon" onClick={scrollShortlistPrev} className="shrink-0 rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <div ref={shortlistSliderRef} onScroll={handleShortlistScroll} className="flex gap-3 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {[...venues, ...venues, ...venues].map((venue, index) => {
+                const isSelected = venue.id === selectedVenue.id;
+                return (
+                  <button
+                    key={venue.id + "-shortlist-" + index}
+                    type="button"
+                    onClick={() => handleSelectVenue(venue.id, false)}
+                    className={`min-w-[220px] cursor-pointer rounded-2xl border px-4 py-3 text-left transition ${isSelected ? "border-white/25 bg-white/[0.08]" : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06]"}`}
+                  >
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-stone-400">{venue.score}</div>
+                    <div className="mt-1 text-sm font-medium text-white">{venue.name}</div>
+                    <div className="mt-1 text-xs text-stone-400">{venue.area}</div>
+                  </button>
+                );
+              })}
             </div>
-            <div className="flex flex-wrap items-center gap-2">
-              <Button
-                variant="outline"
-                onClick={toggleAutoSyncHero}
-                className={`rounded-full border-white/15 px-4 text-white hover:bg-white/10 ${autoSyncHero ? "bg-white/10" : "bg-white/5"}`}
-              >
-                {autoSyncHero ? "Hero follows selection" : "Hero manual"}
-              </Button>
-              <Button variant="outline" size="icon" onClick={selectPrevVenue} className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" onClick={selectNextVenue} className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-              <Button onClick={() => previewSelectedInHero(true)} className="rounded-full bg-white px-4 text-stone-950 hover:bg-stone-200">
-                Preview in hero
-              </Button>
-            </div>
-          </div>
-          <div className="flex gap-3 overflow-x-auto px-4 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {venues.map((venue) => {
-              const isSelected = venue.id === selectedVenue.id;
-              return (
-                <button
-                  key={venue.id}
-                  type="button"
-                  onClick={() => handleSelectVenue(venue.id, false)}
-                  className={`min-w-[220px] rounded-2xl border px-4 py-3 text-left transition ${isSelected ? "border-white/25 bg-white/[0.08]" : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06]"}`}
-                >
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-stone-400">{venue.score}</div>
-                  <div className="mt-1 text-sm font-medium text-white">{venue.name}</div>
-                  <div className="mt-1 text-xs text-stone-400">{venue.area}</div>
-                </button>
-              );
-            })}
+            <Button variant="outline" size="icon" onClick={scrollShortlistNext} className="shrink-0 rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
 
@@ -1015,17 +976,10 @@ export default function AyaWowWeddingTemplate() {
             className="space-y-6"
           >
             <div className="space-y-4 rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <div className="inline-flex rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.24em] text-stone-300">
                   {selectedVenue.mood}
                 </div>
-                <Button
-                  variant="outline"
-                  onClick={toggleAutoSyncHero}
-                  className={`rounded-full border-white/20 px-4 text-white hover:bg-white/10 ${autoSyncHero ? "bg-white/10" : "bg-white/5"}`}
-                >
-                  {autoSyncHero ? "Hero follows selection" : "Hero manual"}
-                </Button>
               </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.22em] text-stone-400">Selected concept</p>
@@ -1040,10 +994,6 @@ export default function AyaWowWeddingTemplate() {
                 ))}
               </div>
               <div className="flex flex-wrap gap-3">
-                <Button onClick={() => previewSelectedInHero(true)} variant="outline" className="rounded-full border-white/20 bg-white/5 px-5 text-white hover:bg-white/10">
-                  Preview in hero
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
                 {selectedVenue.links.map((link) => (
                   <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
                     <Button className="rounded-full bg-white px-5 text-stone-950 hover:bg-stone-200">
@@ -1052,10 +1002,6 @@ export default function AyaWowWeddingTemplate() {
                     </Button>
                   </a>
                 ))}
-                <Button variant="outline" className="rounded-full border-white/20 bg-white/5 px-5 text-white hover:bg-white/10">
-                  <Phone className="mr-2 h-4 w-4" />
-                  {selectedVenue.contact}
-                </Button>
               </div>
             </div>
 
