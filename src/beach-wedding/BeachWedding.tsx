@@ -341,8 +341,11 @@ const venues = [
       { label: "Book & enquire", url: "https://gokcegemile.com/book-inquire" },
     ],
     images: [
-      "https://lh3.googleusercontent.com/p/AF1QipMrY2MCCmIIdCHK7ozdA09zI0lI7SV6M9hd8xHe=s3072-v1",
-      "https://gokcegemile.com/views/images/loading.webp",
+      "https://gokcegemile.com/i/1500/0/img/about/gokce-gemile-about-681cf813832a0.jpg",
+      "https://gokcegemile.com/i/1500/0/img/gallery/villas/villa-gokce/villa-gokce-aerial-estate-panorama-stone-pool-0598.jpg",
+      "https://gokcegemile.com/i/1500/0/img/gallery/villas/villa-gokce/villa-gokce-sunset-pool-forest-bay-reflection-0582.jpg",
+      "https://gokcegemile.com/i/1500/0/img/home/gokce-gemile-home-696cc3889ca7e.jpg",
+      "https://gokcegemile.com/i/1500/0/img/home/gokce-gemile-home-696cd3e4d5581.jpg",
     ],
   },
   {
@@ -644,7 +647,7 @@ export default function AyaWowWeddingTemplate() {
                 variants={fadeUp}
                 className="max-w-2xl text-lg leading-8 text-stone-200 md:text-xl"
               >
-                An overview of seaside wedding venues curated for your celebration in Fethiye, Turkey.
+                An overview of seaside wedding venues curated for your celebration in Fethiye, Turkey. Private islands, boutique cliffside hotels, and secluded bays for an unforgettable destination wedding.
               </motion.p>
             </div>
 
