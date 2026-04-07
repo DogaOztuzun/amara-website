@@ -143,12 +143,12 @@ const venues = [
     summary:
       "A completely private island setting for a majestic, timeless and goddess-like atmosphere. This is the strongest cinematic answer in the shortlist.",
     fit:
-      "Best when the couple wants the celebration itself to feel like a destination-within-the-destination: boat arrival, sea views, sunset dinner, and a powerful sense of exclusivity.",
-    bestFor: ["Private island mood", "Boat arrival", "Sunset dinner", "Beach after-party"],
+      "Ideal for couples who want the wedding to feel like its own destination: boat arrival, open sea views, and a private sunset dinner.",
+    bestFor: ["Private island vibe", "Boat arrival", "Sunset dinner", "Beach after-party"],
     accommodationOptions: [
       "Luxury yachts for part of the guest group",
       "Boutique hotels in Göcek for the remaining guests",
-      "Strong fit for a split-stay hosted experience",
+      "Private villas in Göcek for larger groups",
     ],
     experienceHighlights: [
       "Boat arrival to the island",
@@ -177,14 +177,18 @@ const venues = [
     ],
     contact: "+90 535 251 52 39",
     links: [
-      { label: "Official site", url: "https://www.fimiisland.com/en" },
-      { label: "Organization page", url: "https://www.fimiisland.com/tr/organizasyon-167" },
+      { label: "Website", url: "https://www.fimiisland.com/en" },
+      { label: "Instagram", url: "https://www.instagram.com/fimi.island/" },
     ],
     images: [
       "https://www.fimiisland.com/assets/tpl/img/hero_home_1.jpg",
-      "https://www.fimiisland.com/assets/uploads/thmbs/thmb_w420_h267_DJI_0711.jpg",
-      "https://www.fimiisland.com/assets/uploads/thmbs/thmb_w420_h267_SNY4153deneme.jpg",
-      "https://www.fimiisland.com/assets/uploads/thmbs/thmb_w585_h325_fimi-transport.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/organization/event-1.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/home_2.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/fimi_home_2.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/restaurant/fimi3.jpg",
+      "https://www.fimiisland.com/assets/uploads/fimi-island-restaurant.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/restaurant/fimi6.jpg",
+      "https://www.fimiisland.com/assets/tpl/img/organization/event-10.jpg",
     ],
   },
   {
@@ -192,26 +196,26 @@ const venues = [
     name: "Perdue Hotel + Rups Bar",
     area: "Faralya",
     score: "Boutique Luxury",
-    mood: "Most naturally aligned aesthetic fit",
+    mood: "Intimate, serene, boutique-style romance",
     summary:
       "An intimate and refined setting with a beautiful balance of elegance and energy: boutique wedding mood at Perdue, then a nightlife shift into Rups for the after-party.",
     fit:
-      "Best when the couple wants a romantic, design-forward, emotionally warm wedding story rather than a resort-scale event. This is the most naturally aligned option with Aya's aesthetic language.",
-    bestFor: ["Boutique wedding", "Cliffside romance", "Terrace dinner", "After-party energy"],
+      "Best for couples who want a romantic, design-led, emotionally warm wedding story.",
+    bestFor: ["Boutique wedding", "Cliffside romance", "Terrace dinner", "Moonlit after-party"],
     accommodationOptions: [
-      "Full buyout of Perdue for the main guest group",
-      "Additional nearby villas or boutique hotels for remaining guests",
-      "A strong fit for intimate hosted guest clustering",
+      "Full buyout of Perdue Hotel for the main guest group",
+      "Nearby villas or boutique hotels for remaining guests",
+      "Additional accommodations within easy reach of the venue",
     ],
     experienceHighlights: [
-      "Ceremony and dinner at Perdue terrace zones",
-      "After-party at Rups with private or VIP setup",
-      "A romantic-cliffside-to-night-energy transition",
+      "Ceremony and dinner at Perdue terrace",
+      "After-party at Rups with private / VIP setup",
+      "Flowing from romantic cliffside terrace moments to a more vibrant late-night celebration",
     ],
     capacityLines: [
-      "Perdue stay: ~20–24 pax planning range",
-      "Perdue event: 30–50 pax planning range",
-      "Rups after-party: 50–150 pax planning range",
+      "Perdue stay: ~20–24 pax",
+      "Perdue event: 30–50 pax",
+      "Rups after-party: 50–150 pax",
     ],
     facts: [
       "Perdue has an official Weddings & Honeymoons concept page",
@@ -228,10 +232,11 @@ const venues = [
     ],
     contact: "Perdue: +90 252 614 00 91 · Rups: +90 544 429 27 40",
     links: [
-      { label: "Perdue official", url: "https://www.perdue.com.tr/en" },
+      { label: "Perdue Website", url: "https://www.perdue.com.tr/en" },
+      { label: "Perdue Instagram", url: "https://www.instagram.com/perduehotel/" },
       { label: "Perdue weddings", url: "https://perdue.com.tr/en/concept/weddings-honeymoons" },
-      { label: "Rups official", url: "https://rups.com.tr/en/home/" },
-      { label: "Rups Instagram", url: "https://www.instagram.com/rupsbar" },
+      { label: "Rups Website", url: "https://rups.com.tr/en/home/" },
+      { label: "Rups Instagram", url: "https://www.instagram.com/rupsbythesea/" },
     ],
     images: [
       "https://perdue.com.tr/wp-content/uploads/2023/05/perdue-butik-dugun-kutlamalari.jpg",
@@ -239,21 +244,24 @@ const venues = [
       "https://perdue.com.tr/wp-content/uploads/2023/05/Perdue-1.webp",
       "https://perdue.com.tr/wp-content/uploads/2021/05/Perdue-En-Guzel-Sekilde-Agirlaniyorsunuz.webp",
       "https://perdue.com.tr/wp-content/uploads/2021/05/Perdue-en-iyi-balayi-oteli-.webp",
+      "https://perdue.com.tr/wp-content/uploads/2024/03/Perdue-Restoran1.jpg",
+      "https://perdue.com.tr/wp-content/uploads/2025/04/restaurant1.jpg",
+      "https://rups.com.tr/wp-content/uploads/2023/09/rups-galeri1.jpg",
     ],
   },
   {
     id: "yazz-collective",
     name: "Yazz Collective",
-    area: "Göcek / Fethiye bay side",
+    area: "Fethiye Peninsula",
     score: "Creative Beach Luxury",
     mood: "Stylish and modern with strong design potential",
     summary:
       "A design-led beach destination with enough privacy and atmosphere to become truly high-end when paired with strong production, styling, and a well-shaped guest stay plan.",
     fit:
-      "Best when the couple wants a more fashion-forward, modern-beach-luxury identity and is open to transforming the venue through design and experience production.",
-    bestFor: ["Design-heavy wedding", "Private-feeling beach", "Single-venue flow", "Modern luxury"],
+      "For couples who want a modern, fashion-led beach atmosphere with the flexibility to shape the space through design and custom details.",
+    bestFor: ["Design-led wedding", "Secluded beach setting", "Full-day celebration", "Modern luxury"],
     accommodationOptions: [
-      "Luxury villas in Kayaköy or Faralya",
+      "Luxury villas in Kayaköy or Faralya area",
       "Hillside Beach Club as a premium hotel option",
       "Private yachts for selected guests",
     ],
@@ -264,8 +272,7 @@ const venues = [
     ],
     capacityLines: [
       "Event: 40–120 pax",
-      "On-site stay: not the main accommodation strategy",
-      "Best solved with nearby villas, Hillside, or yachts",
+      "On-site stay: no fixed accommodation",
     ],
     facts: [
       "Yazz Collective presents wedding receptions and exclusive events officially",
@@ -282,8 +289,7 @@ const venues = [
     ],
     contact: "+90 530 277 92 99",
     links: [
-      { label: "Yazz celebrations", url: "https://yazzcollective.com/celebrations/" },
-      { label: "Yazz official", url: "https://yazzcollective.com/" },
+      { label: "Yazz Website", url: "https://yazzcollective.com/" },
       { label: "Yazz Instagram", url: "https://www.instagram.com/yazzcollective" },
     ],
     images: [
@@ -292,6 +298,9 @@ const venues = [
       "https://yazzcollective.com/wp-content/uploads/2023/10/r3.jpg",
       "https://yazzcollective.com/wp-content/uploads/2023/10/r7.jpg",
       "https://yazzcollective.com/wp-content/uploads/2025/07/pv__0010_premium_villa_p10.jpg",
+      "https://yazzcollective.com/wp-content/uploads/2023/10/celebrations_r1.jpg",
+      "https://yazzcollective.com/wp-content/uploads/2025/06/restaurant_evening.jpg",
+      "https://yazzcollective.com/wp-content/uploads/2023/10/r5.jpg",
     ],
   },
   {
@@ -299,16 +308,16 @@ const venues = [
     name: "Gökçe Gemile Private Bay",
     area: "Kayaköy / private peninsula",
     score: "Private Estate Experience",
-    mood: "Highest privacy with easiest logic once buyout is done",
+    mood: "Complete privacy with seamless logistics",
     summary:
       "A fully private villa-estate concept offering comfort, control, privacy, and a very strong hosted-house feeling. This is the clearest private-estate answer in the shortlist.",
     fit:
-      "Best when the couple values privacy, control, and intimate hosted comfort more than public-facing venue drama. It is ideal for a core-group luxury estate wedding.",
-    bestFor: ["Estate buyout", "Private beach", "Garden dinner", "Villa after-party"],
+      "For couples who value privacy and a more intimate, hosted feel - ideal for a luxury celebration with a close group of guests.",
+    bestFor: ["Fully private villa", "Private beach", "Garden dinner", "Villa after-party"],
     accommodationOptions: [
-      "Main estate/villa capacity for the core group",
-      "Additional nearby villas for overflow",
-      "Optional Hillside or yacht support if needed",
+      "Main villa capacity for the core group",
+      "Nearby villas for remaining guests",
+      "Hillside Beach Club or a yacht as a hotel alternative",
     ],
     experienceHighlights: [
       "Ceremony on terrace or poolside",
@@ -316,10 +325,8 @@ const venues = [
       "Private villa after-party",
     ],
     capacityLines: [
-      "Planning stay range: 20–25 pax",
-      "Planning event range: 30–50 pax",
-      "Private beach: yes",
-      "Full buyout: yes",
+      "Villa stay: 20–25 pax",
+      "Event: 30–50 pax",
     ],
     facts: [
       "The official site describes the estate as three private stone villas on an isolated peninsula",
@@ -336,9 +343,9 @@ const venues = [
     ],
     contact: "+90 505 996 64 36",
     links: [
-      { label: "Official site", url: "https://gokcegemile.com/tr/" },
-      { label: "Villa Gökçe", url: "https://gokcegemile.com/villa-gokce" },
-      { label: "Book & enquire", url: "https://gokcegemile.com/book-inquire" },
+      { label: "Website", url: "https://gokcegemile.com/" },
+      { label: "Villas", url: "https://gokcegemile.com/villas" },
+      { label: "Instagram", url: "https://www.instagram.com/gokcegemile/" },
     ],
     images: [
       "https://gokcegemile.com/i/1500/0/img/about/gokce-gemile-about-681cf813832a0.jpg",
@@ -346,23 +353,26 @@ const venues = [
       "https://gokcegemile.com/i/1500/0/img/gallery/villas/villa-gokce/villa-gokce-sunset-pool-forest-bay-reflection-0582.jpg",
       "https://gokcegemile.com/i/1500/0/img/home/gokce-gemile-home-696cc3889ca7e.jpg",
       "https://gokcegemile.com/i/1500/0/img/home/gokce-gemile-home-696cd3e4d5581.jpg",
+      "https://gokcegemile.com/i/1500/0/img/gallery/experiences/wedding-and-celebrations/gokce-gemile-wedding-beach-aisle-evening-setup-0245.jpg",
+      "https://gokcegemile.com/i/1500/0/img/gallery/experiences/wedding-and-celebrations/gokce-gemile-wedding-bridal-bouquet-sunset-seaside-0246.jpg",
+      "https://gokcegemile.com/i/1500/0/img/gallery/home-page/gokce-gemile-outdoor-stone-dining-area-sea-view-0289.jpg",
     ],
   },
   {
     id: "the-bay-beach-club",
     name: "The Bay Beach Club",
-    area: "Günlüklü Koyu / İnlice side",
+    area: "Günlüklü Bay",
     score: "Secluded Beach Experience",
-    mood: "Natural but flexible for custom production",
+    mood: "Relaxed vibe with flexible celebration setup",
     summary:
       "A hidden bay with a natural yet refined atmosphere. This is a flexible canvas that can become very romantic or more immersive depending on production and guest-stay design.",
     fit:
-      "Best when the couple wants nature, bay feeling, and freedom to shape the ceremony/dinner/party format more creatively.",
-    bestFor: ["Hidden bay setting", "Creative build-out", "Beach party", "Flexible stay support"],
+      "Best choice for couples who prefer a laid-back, natural bay atmosphere with the freedom to shape ceremony and celebration in their own way.",
+    bestFor: ["Hidden bay", "Custom event design", "Beach party", "Flexible stay options"],
     accommodationOptions: [
       "On-site rooms, bungalows, suites and premium villas",
-      "Regional villas and Göcek hotels as support",
-      "Yacht, dome or caravan concepts can be layered creatively",
+      "Nearby luxury villas",
+      "Private yachts, domes, or caravans as alternative stays",
     ],
     experienceHighlights: [
       "Ceremony on deck or custom-built platform",
@@ -371,8 +381,7 @@ const venues = [
     ],
     capacityLines: [
       "Event: 50–150 pax",
-      "Accommodation: limited but meaningful on-site support",
-      "Regional hotel/villa/yacht support available",
+      "On-site stay: ~100 pax",
     ],
     facts: [
       "The official site includes a dedicated wedding page",
@@ -389,12 +398,17 @@ const venues = [
     ],
     contact: "+90 532 171 12 15",
     links: [
-      { label: "Official site", url: "https://www.thebaybeachclub.com/en/" },
-      { label: "Wedding page", url: "https://www.thebaybeachclub.com/en/Wedding/" },
+      { label: "Website", url: "https://www.thebaybeachclub.com/en/" },
     ],
     images: [
+      "https://www.thebaybeachclub.com/uploads/842_d.jpg",
+      "https://www.thebaybeachclub.com/uploads/965_7697cc0d-3082-46f6-9cee-3b272f6b60f4.jpg",
+      "https://www.thebaybeachclub.com/uploads/649_c069991a-7869-437f-8862-5a3ce698b110.jpg",
+      "https://www.thebaybeachclub.com/uploads/307_60f3df6e-b9a6-4f1c-9c40-48ac7f1bea7e.jpg",
+      "https://www.thebaybeachclub.com/uploads/929_4.jpg",
+      "https://www.thebaybeachclub.com/uploads/814_2.jpg",
+      "https://www.thebaybeachclub.com/uploads/14_8.jpg",
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo98EbU-qiVTqaGpgA8K889hepi8Mr6wo5HWLP5gTnpUKnF2E4wlLGrvco5HLlR3FlZfhdgPPgFr1cUclDwStLLVZwmLY-xWO2dHN_hiDBXPYIwAyYHLvGGv8WGrIn-zGtMlpyiAceMb9ez=s3072-v1",
-      "https://www.thebaybeachclub.com/uploads/images/1.jpg",
     ],
   },
   {
@@ -406,21 +420,19 @@ const venues = [
     summary:
       "A premium hotel solution for larger guest accommodation, VIP hosting, or to support nearby event venues that need a polished stay hub.",
     fit:
-      "Best used as an accommodation anchor, VIP stay point, or premium fallback rather than the main wedding concept lead for Aya's exact brief.",
-    bestFor: ["Guest accommodation hub", "VIP guests", "Premium fallback", "Bay-view hotel stay"],
+      "Best suited as a premium accommodation base and VIP stay, not as the main wedding venue.",
+    bestFor: ["Guest accommodation hub", "Comfort and privacy", "Luxury hotel stay", "Secluded bay-view retreat"],
     accommodationOptions: [
-      "100+ guest scale support",
-      "Useful as main stay hub for dispersed event plans",
-      "Can support Yazz or other sea-led concepts",
+      "100+ guests",
+      "Works well as a main guest base",
     ],
     experienceHighlights: [
-      "Premium arrival and hosted stay experience",
-      "Strong beach and bay identity",
-      "Useful for guest comfort and wedding-weekend planning",
+      "Hosted stay experience",
+      "Beachside setting and bay views",
+      "Designed to support a relaxed, well-paced wedding weekend",
     ],
     capacityLines: [
-      "Accommodation: 100+ pax usable scale",
-      "Event use: more relevant as support hub in this shortlist",
+      "Stay: 100+ pax",
     ],
     facts: [
       "Hillside is positioned in Kalemya Bay with a secluded private-bay identity",
@@ -436,15 +448,19 @@ const venues = [
     ],
     contact: "+90 212 362 30 30",
     links: [
-      { label: "Official site", url: "https://www.hillsidebeachclub.com/en" },
+      { label: "Website", url: "https://www.hillsidebeachclub.com/en" },
       { label: "Gallery", url: "https://www.hillsidebeachclub.com/en/gallery" },
-      { label: "Beaches", url: "https://www.hillsidebeachclub.com/en/gallery/beaches" },
+      { label: "Instagram", url: "https://www.instagram.com/hillsidebeachclub/" },
     ],
     images: [
-      "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/a-date-with-the-sun.jpg?=e9cca16b59536cc15a97e9ed782ba47a",
       "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/the-vibrant-colors.jpg?=e9cca16b59536cc15a97e9ed782ba47a",
       "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/silent-night.jpg?=e9cca16b59536cc15a97e9ed782ba47a",
       "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/silent-beach-2.jpg?=1318502f2e88b701a17e6fc53eabdbe9",
+      "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/sunset-dinner-near-sea.jpg",
+      "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/alfresco-dining-in-fethiye.jpg",
+      "https://storage.googleapis.com/hillsidebeachclub/uploads/page/image/original/balayi-51.jpg",
+      "https://images.hellomagazine.com/horizon/original_aspect_ratio/36f928dd7fcb-hillside-beach-club-private-beach-z.jpg",
+      "https://storage.googleapis.com/hillsidebeachclub/uploads/gallery/image/original/young-couple-dining-at-pasha-restaurant.jpg",
     ],
   },
 ];
@@ -452,15 +468,15 @@ const venues = [
 const weekendFlow = [
   {
     title: "Arrival & Hosting",
-    text: "Guests arrive into a world that already feels curated — whether by yacht, boutique hotel, villa estate, or a premium hotel hub with transfers handled cleanly.",
+    text: "Guests arrive into a world that already feels curated — whether by yacht, in a boutique hotel, a private villa, or a premium hotel with well-organized transfers.",
   },
   {
     title: "Ceremony & Dinner",
-    text: "The core moment should feel emotionally precise: sea-view ceremony, structured movement, sunset dinner, and a setting that looks expensive because it feels intentional.",
+    text: "The central moment feels clear and intentional: a sea-view ceremony, a natural flow into dinner, sunset light, and a setting elevated by thoughtful design.",
   },
   {
     title: "After-Party & The Morning After",
-    text: "Whether it ends on the sand, on a deck, in a private villa, or in a cliffside bar, the after-party should feel like a continuation of the world — not a separate event.",
+    text: "Whether it continues on the beach, a terrace, in a private villa, or a cliffside bar, the evening flows naturally — carrying the same atmosphere rather than shifting into something separate.",
   },
 ];
 
@@ -569,15 +585,6 @@ export default function AyaWowWeddingTemplate() {
     heroSliderRef.current?.scrollBy({ left: -296, behavior: "smooth" });
   };
 
-  const selectNextVenue = () => {
-    const nextIndex = (selectedVenueIndex + 1) % venues.length;
-    handleSelectVenue(venues[nextIndex].id, false);
-  };
-
-  const selectPrevVenue = () => {
-    const prevIndex = (selectedVenueIndex - 1 + venues.length) % venues.length;
-    handleSelectVenue(venues[prevIndex].id, false);
-  };
 
   const nextImage = () => {
     setActiveImageIndex((prev) => (prev + 1) % selectedImages.length);
@@ -656,14 +663,6 @@ export default function AyaWowWeddingTemplate() {
                 Explore details below
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              {featuredVenue.links[0] && (
-                <a href={featuredVenue.links[0].url} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="rounded-full border-white/20 bg-black/20 px-6 text-white hover:bg-white/10">
-                    View venue website
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-              )}
             </motion.div>
 
             <motion.div
@@ -792,13 +791,12 @@ export default function AyaWowWeddingTemplate() {
           variants={fadeUp}
           className="mx-auto max-w-4xl space-y-6 text-center"
         >
-          <p className="text-sm uppercase tracking-[0.32em] text-stone-400">Reading the brief</p>
           <h3 className="text-3xl font-light tracking-[-0.03em] text-white md:text-5xl">
             Not a standard beach wedding.
             <span className="block text-stone-400">A coastal world with privacy, beauty and intention.</span>
           </h3>
           <p className="text-lg leading-8 text-stone-300">
-            The shortlist below is built around exclusivity, emotional atmosphere, structured guest movement, and settings that can feel majestic, elegant, and memorable without becoming casual or generic.
+            The shortlist below is built around exclusivity, emotional atmosphere, and a well-paced guest experience — with settings that feel elegant, memorable, and never generic.
           </p>
         </motion.div>
       </section>
@@ -810,9 +808,7 @@ export default function AyaWowWeddingTemplate() {
               <p className="text-sm uppercase tracking-[0.32em] text-stone-400">Venue browser</p>
               <h3 className="text-3xl font-light tracking-[-0.03em] text-white md:text-5xl">Click a concept to open details</h3>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-stone-400">
-              Selection now moves you directly to the detail section, so the change is obvious and easier to compare.
-            </p>
+
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -939,36 +935,6 @@ export default function AyaWowWeddingTemplate() {
               ))}
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5">
-              <div className="mb-4 flex items-center justify-between gap-4">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.22em] text-stone-400">Switch venue from here</div>
-                  <div className="mt-1 text-lg font-light text-white">Stay in the comparison flow</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Button variant="outline" size="icon" onClick={selectPrevVenue} className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
-                    <ChevronLeft className="h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="icon" onClick={selectNextVenue} className="rounded-full border-white/15 bg-white/5 text-white hover:bg-white/10">
-                    <ChevronRight className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {venues.filter((venue) => venue.id !== selectedVenue.id).slice(0, 4).map((venue) => (
-                  <button
-                    key={venue.id}
-                    type="button"
-                    onClick={() => handleSelectVenue(venue.id, false)}
-                    className="rounded-2xl border border-white/10 bg-black/10 p-4 text-left transition hover:bg-white/[0.06]"
-                  >
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-stone-400">{venue.score}</div>
-                    <div className="mt-1 text-sm font-medium text-white">{venue.name}</div>
-                    <div className="mt-1 text-xs text-stone-400">{venue.area}</div>
-                  </button>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -1011,7 +977,7 @@ export default function AyaWowWeddingTemplate() {
             <Accordion type="multiple" defaultValue={["accommodation", "experience", "capacity"]} className="space-y-4">
               <AccordionItem value="accommodation" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6">
                 <AccordionTrigger className="text-left text-sm uppercase tracking-[0.22em] text-stone-300 hover:no-underline">
-                  <span className="flex items-center gap-2"><BedDouble className="h-4 w-4" /> Accommodation logic</span>
+                  <span className="flex items-center gap-2"><BedDouble className="h-4 w-4" /> Accommodation</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-3 pb-2">
@@ -1026,7 +992,7 @@ export default function AyaWowWeddingTemplate() {
 
               <AccordionItem value="experience" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6">
                 <AccordionTrigger className="text-left text-sm uppercase tracking-[0.22em] text-stone-300 hover:no-underline">
-                  <span className="flex items-center gap-2"><Ship className="h-4 w-4" /> Experience design</span>
+                  <span className="flex items-center gap-2"><Ship className="h-4 w-4" /> Wedding day experience</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-3 pb-2">
@@ -1041,7 +1007,7 @@ export default function AyaWowWeddingTemplate() {
 
               <AccordionItem value="capacity" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6">
                 <AccordionTrigger className="text-left text-sm uppercase tracking-[0.22em] text-stone-300 hover:no-underline">
-                  <span className="flex items-center gap-2"><Users className="h-4 w-4" /> Capacity & planning notes</span>
+                  <span className="flex items-center gap-2"><Users className="h-4 w-4" /> Capacity & Planning</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid gap-3 pb-2 md:grid-cols-2">
@@ -1050,45 +1016,6 @@ export default function AyaWowWeddingTemplate() {
                         {item}
                       </div>
                     ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="signals" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6">
-                <AccordionTrigger className="text-left text-sm uppercase tracking-[0.22em] text-stone-300 hover:no-underline">
-                  Official signals
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-3 pb-2">
-                    {selectedVenue.facts.map((fact) => (
-                      <div key={fact} className="rounded-2xl border border-white/8 bg-black/10 px-4 py-3 text-sm leading-7 text-stone-300">
-                        {fact}
-                      </div>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="watchouts" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6">
-                <AccordionTrigger className="text-left text-sm uppercase tracking-[0.22em] text-stone-300 hover:no-underline">
-                  Watch-outs & call framing
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="grid gap-4 pb-2 md:grid-cols-2">
-                    <div className="rounded-[1.3rem] border border-white/8 bg-black/10 p-4">
-                      <div className="mb-3 text-xs uppercase tracking-[0.2em] text-stone-400">Watch-out note</div>
-                      <p className="text-sm leading-7 text-stone-300">{selectedVenue.caution}</p>
-                    </div>
-                    <div className="rounded-[1.3rem] border border-white/8 bg-black/10 p-4">
-                      <div className="mb-3 text-xs uppercase tracking-[0.2em] text-stone-400">Call framing</div>
-                      <div className="space-y-3">
-                        {selectedVenue.logistics.map((item) => (
-                          <div key={item} className="text-sm leading-7 text-stone-300">
-                            {item}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -1102,11 +1029,8 @@ export default function AyaWowWeddingTemplate() {
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
               <p className="text-sm uppercase tracking-[0.32em] text-stone-400">Wedding weekend feeling</p>
-              <h3 className="text-3xl font-light tracking-[-0.03em] text-white md:text-5xl">What the whole experience could feel like</h3>
+              <h3 className="text-3xl font-light tracking-[-0.03em] text-white md:text-5xl">What the overall experience could feel like</h3>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-stone-400">
-              This section helps the client imagine the flow, not only compare locations.
-            </p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -1139,18 +1063,10 @@ export default function AyaWowWeddingTemplate() {
           className="overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_35%),linear-gradient(180deg,rgba(186,157,120,0.18),rgba(0,0,0,0.2))] p-8 md:p-12"
         >
           <div className="mx-auto max-w-4xl space-y-6 text-center">
-            <p className="text-sm uppercase tracking-[0.32em] text-stone-300">Closing note</p>
             <h3 className="text-4xl font-light tracking-[-0.04em] text-white md:text-6xl">
               The right venue should feel like
-              <span className="block text-stone-300">it was waiting for their story.</span>
+              <span className="block text-stone-300">it was waiting for your story.</span>
             </h3>
-            <p className="mx-auto max-w-2xl text-lg leading-8 text-stone-200/90">
-              After the call, the shortlist can be reduced to the strongest 2–3 concepts and turned into real venue outreach, availability checks, and a more precise wedding-world proposal.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 pt-2">
-              <Button className="rounded-full bg-white px-6 text-stone-950 hover:bg-stone-200">Refine shortlist after the call</Button>
-              <Button variant="outline" className="rounded-full border-white/20 bg-white/5 px-6 text-white hover:bg-white/10">Prepare venue inquiries</Button>
-            </div>
           </div>
         </motion.div>
       </section>
