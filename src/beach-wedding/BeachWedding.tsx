@@ -141,7 +141,7 @@ const venues = [
     score: "Private Island Experience",
     mood: "Most exclusive and cinematic",
     summary:
-      "A completely private island setting for a majestic, timeless and goddess-like atmosphere. This is the strongest cinematic answer in the shortlist.",
+      "A fully private island setting with a timeless, cinematic atmosphere. One of the most visually striking and self-contained options.",
     fit:
       "Ideal for couples who want the wedding to feel like its own destination: boat arrival, open sea views, and a private sunset dinner.",
     bestFor: ["Private island vibe", "Boat arrival", "Sunset dinner", "Beach after-party"],
@@ -198,7 +198,7 @@ const venues = [
     score: "Boutique Luxury",
     mood: "Intimate, serene, boutique-style romance",
     summary:
-      "An intimate and refined setting with a beautiful balance of elegance and energy: boutique wedding mood at Perdue, then a nightlife shift into Rups for the after-party.",
+      "An intimate, design-led setting that balances elegance with energy: boutique wedding mood at Perdue, then a nightlife shift into Rups for the after-party.",
     fit:
       "Best for couples who want a romantic, design-led, emotionally warm wedding story.",
     bestFor: ["Boutique wedding", "Cliffside romance", "Terrace dinner", "Moonlit after-party"],
@@ -256,7 +256,7 @@ const venues = [
     score: "Creative Beach Luxury",
     mood: "Stylish and modern with strong design potential",
     summary:
-      "A design-led beach destination with enough privacy and atmosphere to become truly high-end when paired with strong production, styling, and a well-shaped guest stay plan.",
+      "A design-led beach destination with the privacy and atmosphere that gives a high-end feeling when shaped through strong production, styling, and a well-considered guest experience.",
     fit:
       "For couples who want a modern, fashion-led beach atmosphere with the flexibility to shape the space through design and custom details.",
     bestFor: ["Design-led wedding", "Secluded beach setting", "Full-day celebration", "Modern luxury"],
@@ -310,7 +310,7 @@ const venues = [
     score: "Private Estate Experience",
     mood: "Complete privacy with seamless logistics",
     summary:
-      "A fully private villa-estate concept offering comfort, control, privacy, and a very strong hosted-house feeling. This is the clearest private-estate answer in the shortlist.",
+      "A fully private villa-estate concept offering comfort, privacy, and a hosted-house feeling.",
     fit:
       "For couples who value privacy and a more intimate, hosted feel - ideal for a luxury celebration with a close group of guests.",
     bestFor: ["Fully private villa", "Private beach", "Garden dinner", "Villa after-party"],
@@ -365,7 +365,7 @@ const venues = [
     score: "Secluded Beach Experience",
     mood: "Relaxed vibe with flexible celebration setup",
     summary:
-      "A hidden bay with a natural yet refined atmosphere. This is a flexible canvas that can become very romantic or more immersive depending on production and guest-stay design.",
+      "A hidden bay with a natural yet refined atmosphere. This is a flexible canvas that can be shaped into either a soft, romantic celebration or a more immersive experience.",
     fit:
       "Best choice for couples who prefer a laid-back, natural bay atmosphere with the freedom to shape ceremony and celebration in their own way.",
     bestFor: ["Hidden bay", "Custom event design", "Beach party", "Flexible stay options"],
@@ -418,7 +418,7 @@ const venues = [
     score: "Main accommodation hub",
     mood: "Premium hotel anchor for guests and VIP stays",
     summary:
-      "A premium hotel solution for larger guest accommodation, VIP hosting, or to support nearby event venues that need a polished stay hub.",
+      "A premium hotel solution best suited for guest accommodation, hosted stays, or supporting nearby venues.",
     fit:
       "Best suited as a premium accommodation base and VIP stay, not as the main wedding venue.",
     bestFor: ["Guest accommodation hub", "Comfort and privacy", "Luxury hotel stay", "Secluded bay-view retreat"],
