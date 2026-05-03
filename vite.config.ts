@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         'beach-wedding': resolve(__dirname, 'beach-wedding/index.html'),
+        'wedding-dinner': resolve(__dirname, 'wedding-dinner/index.html'),
       },
     },
   },
