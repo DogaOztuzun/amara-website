@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: 'How much does a wedding in Turkey cost?',
-    answer: 'The cost of a wedding in Turkey can vary greatly depending on the location, venue, number of guests, catering, decor, and other services included. Additional expenses, including legal fees, translation services, travel costs, and transportation and accommodation for you and your guests, should also be considered.<br/><br/>On average, a destination wedding in Turkey costs between €8,000 and €20,000. The cost of smaller intimate weddings, including elopement weddings, can start from around €3,000, while all-inclusive luxury weddings in big cities or resort areas range from €15,000 to €20,000 or more. The cost per guest typically starts from €100 to €200, depending on the venue and services included.',
+    answer: 'The cost of a wedding in Turkey can vary greatly depending on the location, venue, number of guests, catering, decor, and other services included. Additional expenses, including legal fees, translation services, travel costs, and transportation and accommodation for you and your guests, should also be considered.<br/><br/>On average, a destination wedding in Turkey costs between €8,000 and €20,000. The cost of smaller intimate weddings, including elopement weddings, can start from around €5,000, while all-inclusive luxury weddings in big cities or resort areas range from €15,000 to €20,000 or more.',
   },
   {
     question: 'Can foreigners get married in Turkey?',

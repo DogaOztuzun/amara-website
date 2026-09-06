@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, Facebook, PinIcon, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, PinIcon, Mail, MessageCircle, Send, MapPin } from 'lucide-react';
 
 const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
 
@@ -102,13 +102,36 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 mr-2" />
                 <span className="text-warm-brown">Fethiye, Muğla, Turkey</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-2" />
-                <span className="text-warm-brown">+90 501 549 48 08</span>
+              <li>
+                <a
+                  href="https://wa.me/375293313828"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-warm-brown hover:text-dusty-rose transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <span>WhatsApp: +375 29 331 38 28</span>
+                </a>
               </li>
-              <li className="flex items-center">
-                <Mail className="w-5 h-5 mr-2" />
-                <span className="text-warm-brown">contact@amara.wedding</span>
+              <li>
+                <a
+                  href="https://t.me/+905448391529"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-warm-brown hover:text-dusty-rose transition-colors"
+                >
+                  <Send className="w-5 h-5 mr-2" />
+                  <span>Telegram: +90 544 839 15 29</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:contact@amara.wedding"
+                  className="flex items-center text-warm-brown hover:text-dusty-rose transition-colors"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  <span>contact@amara.wedding</span>
+                </a>
               </li>
             </ul>
           </div>

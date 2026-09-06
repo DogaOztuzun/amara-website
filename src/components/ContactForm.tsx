@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, Calendar } from 'lucide-react';
+import { Mail, MessageCircle, Send, Calendar } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -87,22 +87,40 @@ const ContactForm = () => {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
+              <a href="mailto:contact@amara.wedding" className="flex items-center space-x-4 group">
                 <Mail className="w-6 h-6 text-dusty-rose" />
                 <div>
                   <h3 className="font-semibold">Email us</h3>
-                  <p className="text-gray-600">contact@amara.wedding</p>
+                  <p className="text-gray-600 group-hover:text-dusty-rose transition-colors">contact@amara.wedding</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-dusty-rose" />
+              <a
+                href="https://wa.me/375293313828"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 group"
+              >
+                <MessageCircle className="w-6 h-6 text-dusty-rose" />
                 <div>
-                  <h3 className="font-semibold">Call us</h3>
-                  <p className="text-gray-600">+90 501 549 48 08</p>
+                  <h3 className="font-semibold">WhatsApp</h3>
+                  <p className="text-gray-600 group-hover:text-dusty-rose transition-colors">+375 29 331 38 28</p>
                 </div>
-              </div>
-              
+              </a>
+
+              <a
+                href="https://t.me/+905448391529"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 group"
+              >
+                <Send className="w-6 h-6 text-dusty-rose" />
+                <div>
+                  <h3 className="font-semibold">Telegram</h3>
+                  <p className="text-gray-600 group-hover:text-dusty-rose transition-colors">+90 544 839 15 29</p>
+                </div>
+              </a>
+
               <div className="flex items-center space-x-4">
                 <Calendar className="w-6 h-6 text-dusty-rose" />
                 <div>

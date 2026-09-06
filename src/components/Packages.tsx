@@ -7,7 +7,7 @@ const packages = [
   {
     name: 'Elopement package',
     subtitle: '(up to 8 people)',
-    price: 'From €3,000',
+    price: 'From €5,000',
     features: [
       'Assistance with selecting your elopement wedding venue',
       'A personal wedding planner',
@@ -21,7 +21,7 @@ const packages = [
   {
     name: 'Classic destination wedding package',
     subtitle: '',
-    price: 'From €5,500',
+    price: 'From €7,500',
     features: [
       'Venue selection assistance',
       'A personal wedding planner',
