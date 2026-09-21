@@ -98,9 +98,16 @@ const Footer = () => {
           <div>
             <h4 className="font-cormorant text-lg md:text-xl font-bold mb-4">Contact info</h4>
             <ul className="space-y-4">
-              <li className="flex items-center">
-                <MapPin className="w-5 h-5 mr-2" />
-                <span className="text-warm-brown">Fethiye, Muğla, Turkey</span>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Fethiye%2C%20Mu%C4%9Fla%2C%20Turkey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-warm-brown hover:text-dusty-rose transition-colors"
+                >
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span>Fethiye, Muğla, Turkey</span>
+                </a>
               </li>
               <li>
                 <a
